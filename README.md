@@ -189,3 +189,5 @@ Password - of DockerHub
 `docker-compose up -d`
 `docker-compose down`
 - step 15
+` Also can direct groovy script can write in jinkins project in configruation`
+`create groovy script in you git roject - and select in jenkins configruation - Pipeline script from SCM use groovy file name and location`
