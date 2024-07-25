@@ -86,3 +86,10 @@ sudo apt-get update
   sudo apt-get install fontconfig openjdk-17-jre
   sudo apt-get install jenkins
 ```
+- The apt packages were signed using this key:
+```sh
+pub   rsa4096 2023-03-27 [SC] [expires: 2026-03-26]
+      63667EE74BBA1F0A08A698725BA31D57EF5975CA
+uid                      Jenkins Project 
+sub   rsa4096 2023-03-27 [E] [expires: 2026-03-26]
+```
