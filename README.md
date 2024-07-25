@@ -165,4 +165,46 @@ open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ 
 EC2 instance in security gruop allow 8080 on your ip
 Now user password and start jenkins
 - step 10
+After open jenkins select new-item and select pipelines
+Enter an item name "choose yours" - notes-app-cicd
+- step 11
+select - GitHub project add links of git project
+in "Advanced" write "Display name"
+- step 12
+Declarative pipeline write scrip in groovy language
+- This is script
+```sh
+pipeline {
+    agent any
+    stages {
+        stage('cloning Code') {
+            steps {
+                echo 'Cloning the code'
+                git url:'https://github.com/HackBugs/django-notes-app.git', branch: 'main'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building the code'
+                sh 'docker build -t my-notes-app .'
+            }
+        }
+        stage('Push to Docker Hub') {
+            steps {
+                echo 'Push the image to Docker Hub'
+                withCredentials([usernamePassword(credentialsId:"dockerHub" ,passwordVariable:"dockerHubPass", usernameVariable:"dockerHubUser")]){
+                sh "docker tag my-notes-app ${env.dockerHubUser}/my-notes-app:latest"
+                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
+                sh "docker push ${env.dockerHubUser}/my-notes-app:latest"
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the container'
+                sh "docker-compose" /* "docker run -d -p 8000:8000 hackbugs/my-notes-app:latest" */
+            }
+        }
+    }
+}
 ```
