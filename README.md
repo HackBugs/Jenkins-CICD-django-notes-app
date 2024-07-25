@@ -40,6 +40,33 @@ sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 groups jenkins
 ```
+### if docker is not runnign in some case use this CMD
+It looks like you mistyped the command. Instead of `dicker`, you should use `docker`. Here's the corrected command:
+
+```bash
+docker build -t notes-app .
+```
+
+Make sure you have Docker installed and running on your system. If you encounter any issues with Docker, you can check the Docker service status:
+
+```bash
+sudo systemctl status docker
+```
+
+If Docker is not installed, you can install it using:
+
+```bash
+sudo apt update
+sudo apt install docker.io
+```
+
+Once installed, you can start the Docker service and enable it to start on boot:
+
+```bash
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
 ----------------------------------------------------------
 ### groovy code and script inside jenkins
 ```sh
