@@ -120,8 +120,9 @@ openjdk-17-jre`
 - step 8
 `install jenkins
 follow the link - https://pkg.jenkins.io/debian-stable/
-service jenkins status`
+`
 ```sh
+service jenkins status
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 groups jenkins
