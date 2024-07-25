@@ -177,7 +177,7 @@ pipeline {
 ```
 - step 13
 ```sh
-docker login on your EC2 terminal
+"docker login" on your EC2 terminal
 Username - of DockerHub
 Password - of DockerHub
 ```
