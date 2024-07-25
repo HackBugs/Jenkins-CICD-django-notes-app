@@ -131,7 +131,7 @@ uid                      Jenkins Project
 sub   rsa4096 2023-03-27 [E] [expires: 2026-03-26]
 ```
 -------------------------------------------------------------------
-
+```sh
 - step -1
 Create AWS account 
 - step 2
@@ -165,3 +165,4 @@ open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ 
 EC2 instance in security gruop allow 8080 on your ip
 Now user password and start jenkins
 - step 10
+```
