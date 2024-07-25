@@ -30,6 +30,14 @@ Install Nginx reverse proxy to make this application available
 `sudo apt-get update`
 `sudo apt install nginx`
 
+- add your user to the Docker group
+```sh
+sudo usermod -aG docker $USER
+```
+- Add Jenkins User to Docker Group:
+```sh
+sudo usermod -aG docker jenkins
+```
 ----------------------------------------------------------
 ### groovy code and script inside jenkins
 ```sh
