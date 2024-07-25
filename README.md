@@ -131,48 +131,47 @@ uid                      Jenkins Project
 sub   rsa4096 2023-03-27 [E] [expires: 2026-03-26]
 ```
 -------------------------------------------------------------------
-```sh
 - step -1
-Create AWS account 
+`Create AWS account`
 - step 2
-Create EC2 instance
+`Create EC2 instance`
 - step 3
-Select - Amazon Machine Image (AMI) - UBUNTU
-Create new key pair - login for SSH local terminal
+`Select - Amazon Machine Image (AMI) - UBUNTU
+Create new key pair - login for SSH local terminal`
 - step 4
-git clone Github-project-link
+`git clone Github-project-link
 cd - Enter you project directory
-sudo apt-get update
+sudo apt-get update`
 - step 5
-sudo apt-get docker.io
+`sudo apt-get docker.io
 docker --version
 give permission to not use "sudo docker" - sudo usermod -aG docker $USER
-sudo reboot
+sudo reboot`
 - step 6
-Again access with SSH key
-docker build -t notes-app .
+`Again access with SSH key
+docker build -t notes-app .`
 - step 7
-install java
+`install java
 sudo apt update
 sudo apt install
-openjdk-17-jre
+openjdk-17-jre`
 - step 8
-install jenkins
+`install jenkins
 follow the link - https://pkg.jenkins.io/debian-stable/
-service jenkins status
+service jenkins status`
 - step 9
-open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ jenkins port is 8080
+`open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ jenkins port is 8080
 EC2 instance in security gruop allow 8080 on your ip
-Now user password and start jenkins
+Now user password and start jenkins`
 - step 10
-After open jenkins select new-item and select pipelines
-Enter an item name "choose yours" - notes-app-cicd
+`After open jenkins select new-item and select pipelines
+Enter an item name "choose yours" - notes-app-cicd`
 - step 11
-select - GitHub project add links of git project
-in "Advanced" write "Display name"
+`select - GitHub project add links of git project
+in "Advanced" write "Display name"`
 - step 12
-Declarative pipeline write scrip in groovy language
-- This is script
+`Declarative pipeline write scrip in groovy language
+This is script`
 ```sh
 pipeline {
     agent any
