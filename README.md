@@ -192,7 +192,7 @@ Password - of DockerHub
 ` Also can direct groovy script can write in jinkins project in configruation`
 `create groovy script in you git roject - and select in jenkins configruation - Pipeline script from SCM use groovy file name and location`
 - step 16
-` Everytime not after changing in code not need to click in jenkins on "Build Now"`
+` Everytime after changing in code not need to click in jenkins on "Build Now"`
 ` webhook steup inside github setting`
 ` github option "payload URL" paste your jenkins usr like ip port which you using to access of jenkins`
 ` like this - http://3.110.207.109:8080/github-webhook`
