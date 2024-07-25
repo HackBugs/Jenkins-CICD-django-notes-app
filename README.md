@@ -183,3 +183,9 @@ pipeline {
 Username - of DockerHub
 Password - of DockerHub
 ```
+- step 14
+` install docker compose`
+`cmd - sudo apt-get install docker-compose`
+`docker-compose up -d`
+`docker-compose down`
+- step 15
