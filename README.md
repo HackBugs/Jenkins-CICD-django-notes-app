@@ -25,7 +25,7 @@ docker run -d -p 8000:8000 notes-app:latest
 
 ## Nginx
 
-Install Nginx reverse proxy to make this application available
+- Install Nginx reverse proxy to make this application available
 
 `sudo apt-get update`
 `sudo apt install nginx`
@@ -37,6 +37,8 @@ sudo usermod -aG docker $USER
 - Add Jenkins User to Docker Group:
 ```sh
 sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+groups jenkins
 ```
 ----------------------------------------------------------
 ### groovy code and script inside jenkins
