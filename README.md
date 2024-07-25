@@ -140,6 +140,8 @@ in "Advanced" write "Display name"`
 - step 12
 `Declarative pipeline write scrip in groovy language
 This is script`
+`If you want to push image on docker hub make jenkins system global credentials
+docker hub username and password contein`
 ```sh
 pipeline {
     agent any
