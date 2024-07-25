@@ -121,6 +121,11 @@ openjdk-17-jre`
 `install jenkins
 follow the link - https://pkg.jenkins.io/debian-stable/
 service jenkins status`
+```sh
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+groups jenkins
+```
 - step 9
 `open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ jenkins port is 8080
 EC2 instance in security gruop allow 8080 on your ip
@@ -163,7 +168,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the container'
-                sh "docker-compose" /* "docker run -d -p 8000:8000 hackbugs/my-notes-app:latest" */
+                sh "docker run -d -p 8000:8000 hackbugs/my-notes-app:latest" /*"docker-compose down && docker-compose up -d"*/
             }
         }
     }
