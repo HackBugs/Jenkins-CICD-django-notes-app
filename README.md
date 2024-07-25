@@ -130,3 +130,38 @@ pub   rsa4096 2023-03-27 [SC] [expires: 2026-03-26]
 uid                      Jenkins Project 
 sub   rsa4096 2023-03-27 [E] [expires: 2026-03-26]
 ```
+-------------------------------------------------------------------
+
+- step -1
+Create AWS account 
+- step 2
+Create EC2 instance
+- step 3
+Select - Amazon Machine Image (AMI) - UBUNTU
+Create new key pair - login for SSH local terminal
+- step 4
+git clone Github-project-link
+cd - Enter you project directory
+sudo apt-get update
+- step 5
+sudo apt-get docker.io
+docker --version
+give permission to not use "sudo docker" - sudo usermod -aG docker $USER
+sudo reboot
+- step 6
+Again access with SSH key
+docker build -t notes-app .
+- step 7
+install java
+sudo apt update
+sudo apt install
+openjdk-17-jre
+- step 8
+install jenkins
+follow the link - https://pkg.jenkins.io/debian-stable/
+service jenkins status
+- step 9
+open jenkins on browser copy public-ip from EC2 like http://3.110.207.109:8080/ jenkins port is 8080
+EC2 instance in security gruop allow 8080 on your ip
+Now user password and start jenkins
+- step 10
