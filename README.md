@@ -373,4 +373,14 @@ Replace `your_username` and `your_password` with your Jenkins credentials. Run t
 - This list ensures you have a robust Jenkins setup with essential plugins for various functionalities, enhancing your CI/CD pipeline.
 ______________________________________________________________________________________________________________________________________
 
+## Jenkins Practice
+- Jenkins Plugin Install
+   - Maven intigration
+   - Green Balls
+    
+- Jenkins Global Tool Configuration - we can set like environment variables path in jenkins inside Global Tool Configuration
+
+- Pull project form github - PS C:\> git clone https://github.com/HackBugs/time-tracker.git
+- cd C:\> cd .\time-tracker\
+- CMD Of Maven - mvn clean package
 
