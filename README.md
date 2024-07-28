@@ -275,6 +275,8 @@ pipeline {
 
 ### jenkins port-number 8080
 - jenkins is a framework
-- 
+
+### Pipeline of work
+- Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA 
 
 
