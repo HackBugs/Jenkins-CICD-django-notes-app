@@ -1,5 +1,5 @@
 # Simple Notes App
-### Jenkins Declarative CI/CD Pipeline for DevOps Engineers 
+### ✔️ Jenkins Declarative CI/CD Pipeline for DevOps Engineers 
 This is a simple notes app built with React and Django.
 
 ## Requirements
