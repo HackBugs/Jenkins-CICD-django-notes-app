@@ -197,7 +197,7 @@ Password - of DockerHub
 ` github option "payload URL" paste your jenkins usr like ip port which you using to access of jenkins`
 ` like this - http://3.110.207.109:8080/github-webhook`
 ---------------------------------------------------------------------------------------------------------------
-# CICD Pipeline
+# ☑️CICD Pipeline Jenkins without java we can't run jenkins before installing jenkins first install java
 ### Version Control Github
 - continus intgration mean
 `continus Build + continus teat`
@@ -272,5 +272,9 @@ pipeline {
 ```
 
 - This script represents the pipeline shown in the image, with stages for build, test, stage, and deploy, running within Jenkins as part of a CI/CD process.
+
+### jenkins port-number 8080
+- jenkins is a framework
+- 
 
 
