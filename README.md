@@ -277,6 +277,10 @@ pipeline {
 - jenkins is a framework and jenkins architecture is master-slave one master distribute task with slaves
 
 ### Pipeline of work
-- ➡️ Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA ➡️ deployment and delivery - delivery mean after building and test we give the project of client and deployment means we build test and deployment ➡️ 
+- ➡️ Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA ➡️ deployment and delivery - delivery mean after building and test we give the project of client and deployment means we build test and deployment 
+
+- ➡️ Maven ➡️ compile ➡️ code-review ➡️ unit-testing ➡️ intigration-testing ➡️ Packaging - war, jar
+
+- 
 
 
