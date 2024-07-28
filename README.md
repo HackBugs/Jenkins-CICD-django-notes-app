@@ -370,6 +370,7 @@ java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_USER:$JENKINS_PASSWORD 
 
 Replace `your_username` and `your_password` with your Jenkins credentials. Run this script in your terminal to install the plugins and restart Jenkins.
 
-This list ensures you have a robust Jenkins setup with essential plugins for various functionalities, enhancing your CI/CD pipeline.
-______________________________________________________________________________________________________________________________________________
+- This list ensures you have a robust Jenkins setup with essential plugins for various functionalities, enhancing your CI/CD pipeline.
+______________________________________________________________________________________________________________________________________
+
 
