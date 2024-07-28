@@ -199,7 +199,9 @@ Password - of DockerHub
 ---------------------------------------------------------------------------------------------------------------
 # ☑️CICD Pipeline Jenkins without java we can't run jenkins before installing jenkins first install java
 ### Version Control Github
-**Setups-Download-git,Downlaod-Java,Download-Apache-Maven**
+- https://youtu.be/vxSXqvQy95g?si=GhH9MriOhJiNupRu
+
+**Setups-Download-git,Downlaod-Java,Download-Apache-Maven,Downlaod-Jenkins**
 
 ## continus intgration mean
 `continus Build + continus teat`
@@ -285,6 +287,89 @@ pipeline {
 ### Maven Building process
 - ➡️ Maven ➡️ compile ➡️ code-review ➡️ unit-testing ➡️ intigration-testing ➡️ Packaging - war, jar
 
-- 
+## Jinkins installation Getting Started by Defult first time install plugin list
+Sure, here is a list of Jenkins plugins that you mentioned, which can be installed by default to extend its functionality:
 
+### Jenkins Default Plugins
+
+1. **Folders** - Organize jobs into hierarchical folders.
+2. **OWASP Markup Formatter** - Provides security markup formatter for Jenkins.
+3. **Build Timeout** - Configures build timeouts.
+4. **Credentials Binding** - Allows credentials to be bound to environment variables.
+5. **Timestamper** - Adds timestamps to the Console Output.
+6. **Workspace Cleanup** - Cleans up the workspace before or after a build.
+7. **Ant** - Integrates Apache Ant.
+8. **Gradle** - Integrates Gradle.
+9. **Pipeline** - Supports building continuous delivery pipelines.
+10. **GitHub Branch Source** - Adds GitHub Branch as a source for multi-branch Pipeline.
+11. **Pipeline: GitHub** - Integrates GitHub with Jenkins Pipeline.
+12. **Groovy Libraries** - Loads Groovy libraries for Jenkins Pipeline.
+13. **Pipeline Graph View** - Visualizes Jenkins Pipeline jobs.
+14. **Git** - Integrates Git with Jenkins.
+15. **SSH Build Agents** - Adds SSH build agents for Jenkins.
+16. **Matrix Authorization Strategy** - Provides matrix-based security authorization.
+17. **PAM Authentication** - Integrates PAM (Pluggable Authentication Modules) for authentication.
+18. **LDAP** - Integrates LDAP for authentication.
+19. **Email Extension** - Provides extended email notification functionality.
+20. **Mailer** - Sends email notifications.
+21. **Dark Theme** - Adds a dark theme to Jenkins for a better visual experience.
+
+### Installing Plugins in Jenkins
+
+To install these plugins, follow these steps:
+
+1. **Access Jenkins Plugin Manager:**
+   - Open Jenkins.
+   - Go to "Manage Jenkins" > "Manage Plugins".
+
+2. **Install Plugins:**
+   - Search for each plugin name listed above.
+   - Check the box next to each plugin.
+   - Click on "Install without restart" or "Download now and install after restart".
+
+### Jenkins CLI Installation Script
+
+Alternatively, you can use the Jenkins CLI to install these plugins. Below is a script to install all the listed plugins using the Jenkins CLI:
+
+```bash
+# Download Jenkins CLI
+wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+
+# Define Jenkins URL and credentials
+JENKINS_URL=http://localhost:8080
+JENKINS_USER=your_username
+JENKINS_PASSWORD=your_password
+
+# Install plugins
+java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_USER:$JENKINS_PASSWORD install-plugin \
+  cloudbees-folder \
+  antisamy-markup-formatter \
+  build-timeout \
+  credentials-binding \
+  timestamper \
+  ws-cleanup \
+  ant \
+  gradle \
+  workflow-aggregator \
+  github-branch-source \
+  pipeline-github \
+  pipeline-groovy-lib \
+  pipeline-graph-analysis \
+  git \
+  ssh-slaves \
+  matrix-auth \
+  pam-auth \
+  ldap \
+  email-ext \
+  mailer \
+  dark-theme
+
+# Restart Jenkins to apply changes
+java -jar jenkins-cli.jar -s $JENKINS_URL -auth $JENKINS_USER:$JENKINS_PASSWORD safe-restart
+```
+
+Replace `your_username` and `your_password` with your Jenkins credentials. Run this script in your terminal to install the plugins and restart Jenkins.
+
+This list ensures you have a robust Jenkins setup with essential plugins for various functionalities, enhancing your CI/CD pipeline.
+______________________________________________________________________________________________________________________________________________
 
