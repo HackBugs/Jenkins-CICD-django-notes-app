@@ -67,6 +67,13 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 -------------------------------------------------------------------------
+### Install java first before download jenkins 
+```sh
+sudo apt-get update
+  sudo apt-get install fontconfig openjdk-17-jre
+  sudo apt-get install jenkins
+```
+
 ### Jenkins insatll on ubuntu Debian Packages
 - This is the Debian package repository of Jenkins to automate installation and upgrade. To use this repository, first add the key to your system (for the Weekly Release Line):
 ```sh
@@ -81,10 +88,10 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
  ```
 - Update your local package index, then finally install Jenkins:
 ```sh
-sudo apt-get update
+  sudo apt-get update
   sudo apt-get install fontconfig openjdk-17-jre
   sudo apt-get install jenkins
-```
+  ```
 - The apt packages were signed using this key:
 ```sh
 pub   rsa4096 2023-03-27 [SC] [expires: 2026-03-26]
