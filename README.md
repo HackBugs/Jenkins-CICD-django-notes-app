@@ -274,7 +274,7 @@ pipeline {
 - This script represents the pipeline shown in the image, with stages for build, test, stage, and deploy, running within Jenkins as part of a CI/CD process.
 
 ### jenkins port-number 8080
-- jenkins is a framework
+- jenkins is a framework and jenkins architecture is master-slave one master distribute task with slaves
 
 ### Pipeline of work
 - ➡️ Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA ➡️ deployment and delivery - delivery mean after building and test we give the project of client and deployment means we build test and deployment ➡️ 
