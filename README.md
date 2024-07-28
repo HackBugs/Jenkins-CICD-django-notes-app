@@ -196,3 +196,81 @@ Password - of DockerHub
 ` webhook steup inside github setting`
 ` github option "payload URL" paste your jenkins usr like ip port which you using to access of jenkins`
 ` like this - http://3.110.207.109:8080/github-webhook`
+---------------------------------------------------------------------------------------------------------------
+# CICD Pipeline
+### Version Control Github
+- continus intgration mean
+`continus Build + continus teat`
+- CICD Mean you are writing code on your vscode and pushing on git and you can see on your sever means your web-application something has been changed
+in between this things possible to happed due to jenkind
+
+### Here's how you can describe the pipeline shown in the image:
+
+1. **Developer (Code - Commit)**
+   - The developer writes the code and commits it to a version control system (Git).
+
+2. **Git**
+   - The committed code is pushed to a remote repository hosted on Git.
+
+3. **Jenkins**
+   - Jenkins detects the new commit and triggers the CI/CD pipeline.
+
+4. **Pipeline Stages:**
+   - **Commit**
+     - The pipeline is triggered by the code commit.
+   
+   - **Build**
+     - Jenkins builds the application using tools like Maven, Gradle, or other build tools.
+
+   - **Test**
+     - The application undergoes automated testing (unit tests, integration tests, etc.).
+
+   - **Stage**
+     - The application is staged for deployment, preparing it for production. This may include further testing in a staging environment.
+
+   - **Deploy**
+     - The application is deployed to the production environment.
+
+5. **Production**
+   - The application is live and accessible to users.
+
+### Jenkins Pipeline Script (Jenkinsfile)
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'mvn clean install'  // Replace with your build command
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'mvn test'  // Replace with your test command
+            }
+        }
+        stage('Stage') {
+            steps {
+                echo 'Staging...'
+                // Add your staging steps here
+                // For example, deploying to a staging environment
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                // Add your deploy steps here
+                // For example, deploying to production
+            }
+        }
+    }
+}
+```
+
+- This script represents the pipeline shown in the image, with stages for build, test, stage, and deploy, running within Jenkins as part of a CI/CD process.
+
+
