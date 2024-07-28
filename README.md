@@ -199,8 +199,11 @@ Password - of DockerHub
 ---------------------------------------------------------------------------------------------------------------
 # ☑️CICD Pipeline Jenkins without java we can't run jenkins before installing jenkins first install java
 ### Version Control Github
-- continus intgration mean
+**Setups-Download-git,Downlaod-Java,Download-Apache-Maven**
+
+## continus intgration mean
 `continus Build + continus teat`
+
 - CICD Mean you are writing code on your vscode and pushing on git and you can see on your sever means your web-application something has been changed
 in between this things possible to happed due to jenkind
 
