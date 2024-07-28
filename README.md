@@ -277,6 +277,6 @@ pipeline {
 - jenkins is a framework
 
 ### Pipeline of work
-- Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA ➡️ [hola](url)
+- Developer ➡️ Github ➡️ Jenkins ➡️ Mavan for Build ➡️ selenium for Test ➡️ checkstyle for QA ➡️ deployment and delivery - delivery mean after building and test we give the project of client and deployment means we build test and deployment ➡️ 
 
 
