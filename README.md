@@ -63,7 +63,7 @@ Once installed, you can start the Docker service and enable it to start on boot:
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
--------------------------------------------------------------------------
+____________________________________________________________________
 ### Install java first before download jenkins 
 ```sh
 sudo apt-get update
@@ -96,7 +96,7 @@ pub   rsa4096 2023-03-27 [SC] [expires: 2026-03-26]
 uid                      Jenkins Project 
 sub   rsa4096 2023-03-27 [E] [expires: 2026-03-26]
 ```
--------------------------------------------------------------------
+______________________________________________________________________
 - step -1
 `Create AWS account`
 - step 2
@@ -200,7 +200,12 @@ Password - of DockerHub
 ` webhook steup inside github setting`
 ` github option "payload URL" paste your jenkins usr like ip port which you using to access of jenkins`
 ` like this - http://3.110.207.109:8080/github-webhook`
----------------------------------------------------------------------------------------------------------------
+
+### Jenkins-CICD-django-notes-app - Configuration
+- Pipeline
+    - Pipeline script - in this we write groovy code
+    - Pipeline script from SCM - in this groovy upload on github and set the path
+______________________________________________________________________________________________________________
 # ☑️CICD Pipeline Jenkins without java we can't run jenkins before installing jenkins first install java
 ### Version Control Github
 - https://youtu.be/vxSXqvQy95g?si=GhH9MriOhJiNupRu
